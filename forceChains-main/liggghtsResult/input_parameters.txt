@@ -1,0 +1,21 @@
+    //VARIABLE DEFINITIONS:
+
+    //Where the liggghts files placed.
+    path= ../liggghtsResult/fabricated/
+ 
+    //Particles data file
+    particleFile_name= test_1.liggghts
+
+    //Particle-Particle interactions file
+    pairFile_name= pair_test_1.txt
+
+    //Particle-wall(STL) interactions
+    pairWall_name=
+
+    //Choose a name for output
+    outputFile_name= forceChains
+
+    // Maximum angle for force chain (in radians) (1.5707963267948966,3.1416)
+    alpha= 1.571
+    
+

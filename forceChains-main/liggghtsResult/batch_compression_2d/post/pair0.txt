@@ -1,0 +1,9 @@
+ITEM: TIMESTEP
+0
+ITEM: NUMBER OF ENTRIES
+0
+ITEM: BOX BOUNDS pp pp pp
+0 0.146059
+0 0.146059
+0 0.0055
+ITEM: ENTRIES c_3[1] c_3[2] c_3[3] c_3[4] c_3[5] c_3[6] c_3[7] c_3[8] c_3[9] c_3[10] c_3[11] c_3[12] c_3[13] 

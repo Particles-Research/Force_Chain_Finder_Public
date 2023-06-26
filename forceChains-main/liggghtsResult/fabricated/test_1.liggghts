@@ -1,0 +1,21 @@
+ITEM: TIMESTEP
+0000  //Doesn't matter for now
+ITEM: NUMBER OF ATOMS
+9
+ITEM: BOX BOUNDS pp pp pp
+0.0 0.5     //Doesn't matter for now 
+0.0 0.5
+0.0 0.5
+ITEM: ATOMS id type x y z ix iy iz vx vy vz fx fy fz omegax omegay omegaz radius 
+1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+2 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+3 1 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+4 1 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+5 1 4 2 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+6 1 6 2 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+7 1 0 4 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+8 1 2 4 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+9 1 4 4 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+
+
+
