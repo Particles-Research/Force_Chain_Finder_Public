@@ -6,9 +6,9 @@ set (CMAKE_CXX_STANDARD 20)
 # Here we are not using the default system vtk library
 # The address to the compiled folder of VTK (not install folder)
 # Tested with VTK 9.0.3.
-set(VTK_DIR "/home/aashish/Downloads/vtk/build")
+set(VTK_DIR "/home/user_name/Downloads/vtk/build")
 
-add_subdirectory("/home/aashish/Downloads/force_chains_2/forceChains-main/src/pybind")
+add_subdirectory("./src/pybind")
 
 find_package(VTK COMPONENTS 
   vtkCommonCore
@@ -29,12 +29,12 @@ include_directories("./src")
 
 # Eigen doesn't need to be installed, it is a header
 # only library.
-include_directories("/home/aashish/Downloads/force_chains_2/forceChains-main/src/eigen-3.4.0/")
+include_directories("./src/eigen-3.4.0/")
 link_libraries(${VTK_LIBRARIES})
 
 # Example
 add_executable(1-single ./examples/1-single.cpp)
 add_executable(3-batch ./examples/3-batch.cpp)
-pybind11_add_module(forcechain "/home/aashish/Downloads/force_chains_2/forceChains-main/src/pybind/userinterface.cpp")
+pybind11_add_module(forcechain "./src/pybind/userinterface.cpp")
 
 
