@@ -30,6 +30,41 @@ The **Force Chain Finder** software depends on the following libraries:
 - Eigen Library
 - pybind Library
 
+## Build Instruction
+Step 1: Set Up Your Project Directory
+Create a directory for your C++ project and navigate to it in your terminal.
+```bash
+mkdir MyCppProject
+cd MyCppProject
+```
+Step 2: Create a CMakeLists.txt File
+Create a CMakeLists.txt file in your project directory. A sample CMakeLists.txt file is provided. 
+
+Step 3: Configure Your Build
+In your terminal, navigate to your project directory and create a build directory. This is where you'll build your program.
+```bash
+mkdir build
+cd build
+```
+Run CMake to configure the build:
+
+```bash
+cmake ..
+```
+
+This command generates build files based on your CMakeLists.txt file.
+Step 4: Build the Program
+Once CMake has configured your build, you can build your C++ program using a build tool like make on Unix-based systems or Visual Studio on Windows. Use the --build option to specify the target (your project name).
+On Unix-based systems:
+```bash
+make MyCppProject
+```
+Step 6: Run the Program
+After the build is successful, you can run the program:
+On Unix-based systems:
+```bash
+./MyCppProject
+```
 ## Usage
 To use the software, follow the steps below:
 1. Clone the repository from GitHub.
