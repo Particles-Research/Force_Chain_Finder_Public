@@ -30,6 +30,8 @@ The **Force Chain Finder** software depends on the following libraries:
 - Eigen Library
 - pybind Library
 
+The packages Eigen and Pybind should be placed in the src directory. Pybind is an open-source C++ library that offers a seamless bridge between C++ and Python. It enables users to expose C++ code to Python and vice versa, allowing them to call C++ functions from Python and Python functions from C++. Both Eigen and Pybind are header-only libraries, meaning that they do not require a separate installation or compilation. They can be used by simply including the appropriate header files in the C++ code and then compiling the code as part of the project build process.
+
 ## Build Instruction
 Step 1: Set Up Your Project Directory
 Create a directory for your C++ project and navigate to it in your terminal.
