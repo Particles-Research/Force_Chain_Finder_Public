@@ -151,10 +151,12 @@ namespace ForceChain
            
             // adjusts the positions of particle x2 in periodic interaction with x1 
             //for appropriately calculating the x12 vector
-            if (isPeriodicPair)
-                x2=periodic_adjust(x1, x2, low_bound, upp_bound);
 
             Eigen::Vector3d x12 = x1 - x2;
+            if (x12.norm()>(particles[id1].radius+particles[id2].radius)){
+                x2=periodic_adjust(x1, x2, low_bound, upp_bound);
+                x12 = x1 - x2;
+            }     
             x12 = x12 / x12.norm();
 
             // fill forces
@@ -163,7 +165,6 @@ namespace ForceChain
                 particles[id1].force(i) +=   f12[i];
                 particles[id2].force(i) +=  - f12[i];
             }
-
 
             double vol1 = particles[id1].getVolume();
             double vol2 = particles[id2].getVolume();
