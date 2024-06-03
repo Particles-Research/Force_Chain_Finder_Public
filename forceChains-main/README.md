@@ -92,18 +92,27 @@ The order of the output file will be different from the compute command. It is:
 ```bash
 p1x p1y p1z p2x p2y p2z id1 id2 is PeriodicInteraction f12x f12y f12z overlap
 ```
-where p1 and p2 mean particle 1 and 2, and f12 is the interaction force between them. f12 is the force acting on particle 1. An example script is in the `./examples/liggghtsResult.tar.xz` file.
+where p1 and p2 mean particle 1 and 2, and f12 is the interaction force between them. f12 is the force acting on particle.
 
 #### Get Wall interactions from LIGGGHTS
-To get wall interactions from LIGGGHTS, follow the steps below:
-1. Create a 3D box in FreeCad at the size of the bed. The height of the bed is not important.
-2. Import it to Meshlab.
-3. Remove all the triangles except the ones that create one plane at the size of the bed.
-4. Go to `filter -> remeshing and ... -> isotropic meshing`.
-5. Mesh the surface to have 40-100 triangles.
-6. Import in LIGGGHTS run.
+To get the interaction, add this line to a LIGGGHTS script:
 
-Please note that formatting may vary slightly depending on the specific rendering engine you use to view the Markdown document.
+```
+compute         4 all wall/gran/local id pos delta force
+```
+
+and have dump line 
+
+```
+dump		dmp3 all local ${dmp_stp} ./build/post/wall_pair*.txt c_4[1] c_4[2] c_4[3] c_4[4] c_4[5] c_4[6] c_4[7] c_4[8] c_4[9] c_4[10] c_4[11] c_4[12] c_4[13]
+```
+
+The output is 
+
+```
+position wall (3), position particle (3), Mesh Id, triangle id, particle id, force(3), overlap
+```
+Force is the one acting on the particle.
 
 ## References
 [1] J. Peters, M. Muthuswamy, J. Wibowo, A. Tordesillas, Characterization of force chains in granular material, Physical Review E, 72  041307 (2005)
