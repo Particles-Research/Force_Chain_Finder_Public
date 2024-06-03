@@ -35,6 +35,8 @@ link_libraries(${VTK_LIBRARIES})
 # Example
 add_executable(1-single ./examples/1-single.cpp)
 add_executable(3-batch ./examples/3-batch.cpp)
+add_executable(3-batch ./examples/3-batch.cpp)
+add_executable(4-moving ./examples/4-moving.cpp)
 # pybind11_add_module(forcechain "./src/pybind/userinterface.cpp")
 
 
