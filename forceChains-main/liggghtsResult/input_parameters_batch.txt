@@ -1,7 +1,7 @@
     //VARIABLE DEFINITIONS:
 
     //Where the liggghts files placed.
-    path= ../liggghtsResult/batch_shear_2d/post/
+    inputPath= ../liggghtsResult/batch_shear_2d/post/
  
     //Particles data file
     particleFile_name= shear
@@ -10,6 +10,10 @@
     //Particle-wall(STL) interactions  (leave the following two fields empty if no wall exists)
     pairWall_name=
     pairWall_ext=
+
+    //Where the output files should be placed
+    outputPath= ../liggghtsResult/batch_shear_2d/post/
+
 
     // Maximum angle for force chain (in radians) (0.39275, 0.5236, 0.7855, 1.0471, 1.571,3.1416,6.2832)
     alpha= 3.1416

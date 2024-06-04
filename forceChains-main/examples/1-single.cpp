@@ -32,15 +32,15 @@ int main()
     }
    
     // path is where the liggghts files are placed.
-    string line, path, particleFile_name, pairFile_name, pairWall_name, outputFile_name;
+    string line, inputPath, particleFile_name, pairFile_name, pairWall_name, outputPath, outputFile_name;
     double alpha;
 
     while (getline(inputFile, line)) {
         istringstream iss(line);
 
-        if (line.find("path=") != string::npos) {
+        if (line.find("inputPath=") != string::npos) {
             iss.ignore(line.length(), '=');
-            iss >> path;
+            iss >> inputPath;
         } else if (line.find("particleFile_name=") != string::npos) {
             iss.ignore(line.length(), '=');
             iss >> particleFile_name;
@@ -50,6 +50,9 @@ int main()
         } else if (line.find("pairWall_name=") != string::npos) {
             iss.ignore(line.length(), '=');
             iss >> pairWall_name;
+        } else if (line.find("outputPath=") != string::npos) {
+            iss.ignore(line.length(), '=');
+            iss >> outputPath;
         } else if (line.find("outputFile_name=") != string::npos) {
             iss.ignore(line.length(), '=');
             iss >> outputFile_name;
@@ -63,16 +66,16 @@ int main()
     
     //-------------------------READING DONE------------------------------------//
 
-    string particleFile = path + particleFile_name;
+    string particleFile = inputPath + particleFile_name;
 
     // Particle-Particle interactions file
-    string pairFile = path + pairFile_name;
+    string pairFile = inputPath + pairFile_name;
 
     // Particle-wall(STL) interactions
-    string pairWall = path + pairWall_name;
+    string pairWall = inputPath + pairWall_name;
 
     // Choose a name for output
-    string outputFile = path + outputFile_name;
+    string outputFile = outputPath + outputFile_name;
 
     // Inject the file names and the maximum angle for force chains
     UserInterface ui(particleFile, pairFile, pairWall, alpha);

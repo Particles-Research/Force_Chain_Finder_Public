@@ -1,7 +1,7 @@
     //VARIABLE DEFINITIONS:
 
     //Where the liggghts files placed.
-    path= ../liggghtsResult/fabricated/
+    inputPath= ../liggghtsResult/fabricated/
  
     //Particles data file
     particleFile_name= test_1.liggghts
@@ -11,6 +11,9 @@
 
     //Particle-wall(STL) interactions
     pairWall_name=
+
+    //Where the output files should be placed
+    outputPath= ../liggghtsResult/fabricated/
 
     //Choose a name for output
     outputFile_name= forceChains

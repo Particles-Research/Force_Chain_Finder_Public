@@ -25,16 +25,16 @@ int main()
     }
    
     
-    string line, path, particleFile_name, particleFile_ext, pairWall_name, pairWall_ext, outputFile_name;  // path is where the liggghts files are placed.
+    string line, inputPath, particleFile_name, particleFile_ext, pairWall_name, pairWall_ext, outputPath, outputFile_name;  // path is where the liggghts files are placed.
     double alpha;
     int start, last, step; // the range of files number
 
     while (getline(inputFile, line)) {
         istringstream iss(line);
 
-        if (line.find("path=") != string::npos) {
+        if (line.find("inputPath=") != string::npos) {
             iss.ignore(line.length(), '=');
-            iss >> path;
+            iss >> inputPath;
         } else if (line.find("particleFile_name=") != string::npos) {
             iss.ignore(line.length(), '=');
             iss >> particleFile_name;
@@ -59,7 +59,10 @@ int main()
         } else if (line.find("step=") != string::npos) {
             iss.ignore(line.length(), '=');
             iss >> step;
-        } 
+        } else if (line.find("outputPath=") != string::npos) {
+            iss.ignore(line.length(), '=');
+            iss >> outputPath;
+        }
     }
 
     inputFile.close();
@@ -70,12 +73,12 @@ int main()
     // These name structures are decided in your liggghts script, if different to
     // below ones, modify below ones accordingly.
 
-    auto d_names = CreateNumericFileName(path + particleFile_name, particleFile_ext , start, last, step);
-    auto pairNames = CreateNumericFileName(path + "pair", ".txt", start, last, step);
-    auto wallNames = CreateNumericFileName(path + pairWall_name, pairWall_ext, start, last, step);
+    auto d_names = CreateNumericFileName(inputPath + particleFile_name, particleFile_ext , start, last, step);
+    auto pairNames = CreateNumericFileName(inputPath + "pair", ".txt", start, last, step);
+    auto wallNames = CreateNumericFileName(inputPath + pairWall_name, pairWall_ext, start, last, step);
 
     // output files
-    auto chainNames = CreateNumericFileName(path + "../"+ "forceChains_", "", start, last, step);
+    auto chainNames = CreateNumericFileName(outputPath + "forceChains_", "", start, last, step);
 
     for (size_t i = 0; i < d_names.size(); i++)
     {
