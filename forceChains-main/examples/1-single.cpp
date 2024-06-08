@@ -83,7 +83,7 @@ int main()
     // Calculate force chains
     ui.Run();
 
-    // You exaport chains in CSV or VTP (Paraview) format.
+    // You export chains in CSV or VTP (Paraview) format.
     ui.WriteChainsCsv(outputFile + ".csv", true, ",");
     ui.WriteChainsVtp(outputFile + ".vtp");
 
