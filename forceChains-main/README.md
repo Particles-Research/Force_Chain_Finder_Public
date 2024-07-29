@@ -94,7 +94,7 @@ The order of the output file will be different from the compute command. It is:
 ```bash
 p1x p1y p1z p2x p2y p2z id1 id2 is PeriodicInteraction f12x f12y f12z overlap
 ```
-where p1 and p2 mean particle 1 and 2, and f12 is the interaction force between them. f12 is the force acting on particle.
+where p1 and p2 mean particle 1 and 2, and f12 is the interaction force between them. f12 is the force acting on particle 1 due to 2.
 
 #### Get Wall interactions from LIGGGHTS
 To get the interaction, add this line to a LIGGGHTS script:
