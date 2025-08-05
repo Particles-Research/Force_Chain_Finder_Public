@@ -117,5 +117,6 @@ position wall (3), position particle (3), Mesh Id, triangle id, particle id, for
 Force is the one acting on the particle.
 
 ## References
-[1] O Ejtehadi, AK Gupta, S Khajepor, S Haeri, Force-chain finder: A software tool for the recursive detection of force-chains in granular materials via minor principal stress, Computer Physics Communications 297 (2024) 109070. 
+[1] O Ejtehadi, AK Gupta, S Khajepor, S Haeri, Force-chain finder: A software tool for the recursive detection of force-chains in granular materials via minor principal stress, Computer Physics Communications 297 (2024) 109070.
+
 [2] J. Peters, M. Muthuswamy, J. Wibowo, A. Tordesillas, Characterization of force chains in granular material, Physical Review E, 72  041307 (2005)
